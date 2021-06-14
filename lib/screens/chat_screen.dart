@@ -35,12 +35,8 @@ class ChatScreen extends StatelessWidget {
         onPressed: () {
           FirebaseFirestore.instance
               .collection('chats/LT8eJia23cj0fiJdRUbG/messages')
-              .snapshots()
-              .listen((data) {
-            data.docs.forEach((doc) {
-              print(doc['text']);
-            });
-            // print(data.docs[0]['text']);
+              .add({
+            "text": "This is added by clicking the button!",
           });
         },
         child: Icon(Icons.add),
