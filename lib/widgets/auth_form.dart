@@ -80,7 +80,7 @@ class _AuthFormState extends State<AuthForm> {
                       },
                       validator: (value) {
                         if (value!.isEmpty || value.length < 7) {
-                          return "Please enter at least 4 characters";
+                          return "Please enter at least 7 characters";
                         }
                         return null;
                       },
