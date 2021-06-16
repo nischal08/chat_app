@@ -8,8 +8,10 @@ class AuthForm extends StatefulWidget {
     required String username,
     required bool isLogin,
   }) submitAuthForm;
+  final bool isLoading;
   AuthForm(
     this.submitAuthForm,
+    this.isLoading,
   );
 
   @override
@@ -101,7 +103,8 @@ class _AuthFormState extends State<AuthForm> {
                   SizedBox(
                     height: 12,
                   ),
-                  ElevatedButton(
+                  if(widget.isLoading)CircularProgressIndicator(),
+                if(!widget.isLoading)  ElevatedButton(
                     onPressed: _trySubmit,
                     child: Text(
                       _isLogin ? 'Login ' : 'Signup',
