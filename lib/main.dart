@@ -17,14 +17,14 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'FlutterChat',
       theme: ThemeData(
-        primarySwatch: Colors.pink,
+        primarySwatch: Colors.indigo,
         backgroundColor: Colors.pink,
         accentColor: Colors.deepPurple,
         accentColorBrightness: Brightness.dark //avoid black text in purple
         ,
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
-            primary: Colors.pink,
+            primary: Colors.indigoAccent,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(20),
             ),
